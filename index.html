@@ -78,7 +78,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  padding: 18px 0;
+  padding: 16px 0;
   transition: var(--transition);
   background: transparent;
 }
@@ -87,7 +87,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
-  padding: 12px 0;
+  padding: 10px 0;
 }
 .header-inner {
   display: flex;
@@ -98,41 +98,62 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 26px;
   color: var(--magenta);
-  letter-spacing: -0.3px;
   text-decoration: none;
-}
-.logo-svg {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 4px 10px rgba(45, 27, 61, 0.35));
   transition: var(--transition);
 }
-.logo:hover .logo-svg { transform: rotate(-6deg) scale(1.05); }
+.logo-img {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(45, 27, 61, 0.35));
+  transition: var(--transition);
+}
+.header.scrolled .logo-img { width: 54px; height: 54px; }
+.logo:hover .logo-img { transform: rotate(-4deg) scale(1.04); }
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 5px;
+}
 .logo-text {
   position: relative;
-  line-height: 1;
-  padding-bottom: 5px;
+  font-size: 30px;
+  letter-spacing: -0.4px;
+  padding-bottom: 4px;
+  font-weight: 800;
 }
 .logo-text::after {
   content: '';
   position: absolute;
   left: 0; bottom: 0;
-  width: 80%;
-  height: 1.5px;
+  width: 85%;
+  height: 1.6px;
   background: linear-gradient(90deg, var(--magenta) 0%, transparent 100%);
-  opacity: 0.55;
+  opacity: 0.6;
+}
+.logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--magenta);
+  opacity: 0.75;
 }
 .header:not(.scrolled) .logo { color: var(--white); }
+.header:not(.scrolled) .logo-tagline { color: rgba(255,255,255,0.85); opacity: 1; }
 .header:not(.scrolled) .logo-text::after {
   background: linear-gradient(90deg, var(--magenta) 0%, transparent 100%);
-  opacity: 0.8;
+  opacity: 0.9;
 }
+.header.scrolled .logo-text { font-size: 26px; }
+.header.scrolled .logo-tagline { font-size: 9px; }
 
 .nav {
   display: flex;
@@ -227,7 +248,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding: 140px 0 80px;
+  padding: 160px 0 80px;
 }
 .hero::before {
   content: '';
@@ -1053,6 +1074,11 @@ section { padding: 100px 0; }
 
 @media (max-width: 768px) {
   section { padding: 70px 0; }
+  .logo-img { width: 50px; height: 50px; }
+  .header.scrolled .logo-img { width: 44px; height: 44px; }
+  .logo-text { font-size: 24px; }
+  .header.scrolled .logo-text { font-size: 22px; }
+  .logo-tagline { font-size: 9px; letter-spacing: 2px; }
   .nav-links {
     position: fixed;
     top: 0; right: -100%;
@@ -1114,23 +1140,11 @@ section { padding: 100px 0; }
 <header class="header" id="header">
   <div class="container header-inner">
     <a href="#" class="logo" aria-label="Résinov - Accueil">
-      <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <radialGradient id="logoBg" cx="50%" cy="38%" r="68%">
-            <stop offset="0%" stop-color="#4A2B5F"/>
-            <stop offset="55%" stop-color="#2D1B3D"/>
-            <stop offset="100%" stop-color="#150A1F"/>
-          </radialGradient>
-          <linearGradient id="logoR" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#D356BD"/>
-            <stop offset="100%" stop-color="#A93896"/>
-          </linearGradient>
-        </defs>
-        <circle cx="32" cy="32" r="30" fill="url(#logoBg)"/>
-        <circle cx="32" cy="32" r="30" fill="none" stroke="#C044AA" stroke-width="0.6" opacity="0.4"/>
-        <path d="M22 16 L36 16 Q47 16 47 27 Q47 36 39 39 L48 50 L40 50 L32 40 L28 40 L28 50 L22 50 Z M28 22 L28 34 L36 34 Q41 34 41 28 Q41 22 36 22 Z" fill="url(#logoR)"/>
-      </svg>
-      <span class="logo-text">Résinov</span>
+      <img src="logo-resinov.png" alt="Résinov" class="logo-img">
+      <span class="logo-block">
+        <span class="logo-text">Résinov</span>
+        <span class="logo-tagline">Construisez votre avenir</span>
+      </span>
     </a>
     <nav class="nav">
       <ul class="nav-links" id="navLinks">
