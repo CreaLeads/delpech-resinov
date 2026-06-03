@@ -1017,6 +1017,21 @@ section { padding: 100px 0; }
   transform: translateY(-2px);
 }
 .footer-social svg { width: 18px; height: 18px; }
+.footer-legal {
+  margin-bottom: 14px;
+}
+.footer-legal a {
+  color: rgba(255,255,255,0.7);
+  font-size: 13px;
+  text-decoration: none;
+  transition: var(--transition);
+  border-bottom: 1px dotted rgba(255,255,255,0.25);
+  padding-bottom: 2px;
+}
+.footer-legal a:hover {
+  color: var(--magenta);
+  border-bottom-color: var(--magenta);
+}
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 24px;
@@ -1508,6 +1523,9 @@ section { padding: 100px 0; }
       </div>
     </div>
     <div class="footer-bottom">
+      <div class="footer-legal">
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
       © 2026 Résinov — Formation professionnelle · Île-de-France · Tous droits réservés
     </div>
   </div>

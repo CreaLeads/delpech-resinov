@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Résinov | Formation Résine Décorative</title>
+<meta name="description" content="Mentions légales du site Résinov - Formation à la pose de résine décorative en Île-de-France.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --violet: #2D1B3D;
+  --violet-dark: #1F1229;
+  --magenta: #C044AA;
+  --magenta-dark: #A03690;
+  --white: #FFFFFF;
+  --grey-light: #F8F6FA;
+  --grey-medium: #E5E0EB;
+  --text: #1A1A2E;
+  --text-muted: #6B6878;
+  --shadow-sm: 0 2px 8px rgba(45, 27, 61, 0.06);
+  --radius: 14px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.7;
+  background: var(--white);
+  font-size: 16px;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--violet);
+}
+a { color: var(--magenta); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--magenta-dark); text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+.container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== HEADER ===== */
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-medium);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--magenta);
+  transition: var(--transition);
+}
+.logo:hover { transform: translateX(-2px); }
+.logo-img {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(45, 27, 61, 0.3));
+}
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 4px;
+}
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: -0.3px;
+  position: relative;
+  padding-bottom: 3px;
+}
+.logo-text::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 80%;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--magenta) 0%, transparent 100%);
+  opacity: 0.5;
+}
+.logo-tagline {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 1.5px solid var(--violet);
+  border-radius: var(--radius);
+  color: var(--violet);
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
+.back-home:hover {
+  background: var(--violet);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ===== HERO ===== */
+.page-hero {
+  background: var(--violet);
+  color: var(--white);
+  padding: 80px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='none' stroke='%23C044AA' stroke-width='0.8' opacity='0.18'><polygon points='40,5 75,40 40,75 5,40'/><polygon points='40,25 55,40 40,55 25,40'/></g></svg>");
+  background-size: 80px 80px;
+  opacity: 0.5;
+}
+.page-hero-content { position: relative; z-index: 2; }
+.page-hero .label {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--magenta);
+  margin-bottom: 14px;
+}
+.page-hero h1 {
+  color: var(--white);
+  font-size: clamp(34px, 5vw, 50px);
+  letter-spacing: -0.5px;
+}
+.page-hero .updated {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* ===== CONTENT ===== */
+.content { padding: 60px 0 100px; }
+.content section {
+  margin-bottom: 44px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--grey-medium);
+}
+.content section:last-child { border-bottom: none; }
+.content h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.content h2::before {
+  content: '';
+  width: 5px;
+  height: 24px;
+  background: var(--magenta);
+  border-radius: 3px;
+}
+.content h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--violet);
+  margin: 18px 0 8px;
+}
+.content p {
+  margin-bottom: 14px;
+  color: var(--text);
+}
+.content ul {
+  margin: 12px 0 16px 22px;
+  color: var(--text);
+}
+.content ul li { margin-bottom: 6px; }
+.content strong { color: var(--violet); font-weight: 600; }
+
+.info-card {
+  background: var(--grey-light);
+  border-left: 4px solid var(--magenta);
+  padding: 22px 26px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 16px 0;
+}
+.info-card p { margin-bottom: 8px; }
+.info-card p:last-child { margin-bottom: 0; }
+.info-card .label-inline {
+  display: inline-block;
+  min-width: 130px;
+  font-weight: 600;
+  color: var(--violet);
+}
+
+.placeholder {
+  display: inline-block;
+  background: rgba(192, 68, 170, 0.12);
+  color: var(--magenta-dark);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', monospace;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--violet-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer a { color: rgba(255,255,255,0.8); }
+.footer a:hover { color: var(--magenta); }
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.footer-copy { opacity: 0.6; font-size: 13px; }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 60px 0 50px; }
+  .content { padding: 40px 0 60px; }
+  .logo-img { width: 46px; height: 46px; }
+  .logo-text { font-size: 22px; }
+  .back-home { padding: 8px 14px; font-size: 13px; }
+  .info-card .label-inline { display: block; min-width: auto; margin-bottom: 2px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Résinov - Accueil">
+      <img src="logo-resinov.png" alt="Résinov" class="logo-img">
+      <span class="logo-block">
+        <span class="logo-text">Résinov</span>
+        <span class="logo-tagline">Construisez votre avenir</span>
+      </span>
+    </a>
+    <a href="index.html" class="back-home">← Retour au site</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container page-hero-content">
+    <span class="label">Informations légales</span>
+    <h1>Mentions légales</h1>
+    <p class="updated">Dernière mise à jour : 25 mai 2026</p>
+  </div>
+</section>
+
+<main class="content">
+  <div class="container">
+
+    <section>
+      <h2>Éditeur du site</h2>
+      <p>Le présent site internet, accessible à l'adresse <a href="https://delpech-resinov.vercel.app">delpech-resinov.vercel.app</a>, est édité par :</p>
+      <div class="info-card">
+        <p><span class="label-inline">Nom :</span> Jean Claude Delpech</p>
+        <p><span class="label-inline">Activité :</span> Résinov — Formation à la pose de résine décorative et services d'application</p>
+        <p><span class="label-inline">Statut juridique :</span> <span class="placeholder">[À compléter par le client]</span></p>
+        <p><span class="label-inline">SIRET :</span> <span class="placeholder">[À compléter par le client]</span></p>
+        <p><span class="label-inline">Adresse :</span> <span class="placeholder">[À compléter — adresse en Île-de-France]</span></p>
+        <p><span class="label-inline">Téléphone :</span> <a href="tel:0672264729">06 72 26 47 29</a></p>
+        <p><span class="label-inline">Email :</span> <a href="mailto:paridel2001@yahoo.fr">paridel2001@yahoo.fr</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Directeur de la publication</h2>
+      <p>Le directeur de la publication du site est <strong>Jean Claude Delpech</strong>, en qualité de responsable de l'activité Résinov.</p>
+    </section>
+
+    <section>
+      <h2>Hébergement</h2>
+      <p>Le site est hébergé par :</p>
+      <div class="info-card">
+        <p><span class="label-inline">Hébergeur :</span> Vercel Inc.</p>
+        <p><span class="label-inline">Adresse :</span> 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis</p>
+        <p><span class="label-inline">Site :</span> <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Propriété intellectuelle</h2>
+      <p>L'ensemble du contenu présent sur ce site (textes, images, logo Résinov, photographies, charte graphique, structure, etc.) est la propriété exclusive de <strong>Jean Claude Delpech</strong> ou de ses partenaires, et est protégé par le droit français et international de la propriété intellectuelle.</p>
+      <p>Toute reproduction, représentation, modification, publication ou adaptation totale ou partielle des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de l'éditeur.</p>
+      <p>Toute exploitation non autorisée est susceptible d'engager la responsabilité civile et pénale de son auteur, conformément aux articles L. 335-2 et suivants du Code de la propriété intellectuelle.</p>
+    </section>
+
+    <section>
+      <h2>Données personnelles</h2>
+      <p>Les informations collectées via le formulaire de contact (nom, prénom, téléphone, email, métier, service souhaité, message) sont destinées uniquement à <strong>Jean Claude Delpech</strong> pour le traitement de votre demande d'inscription ou de devis.</p>
+      <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés du 6 janvier 1978 modifiée, vous disposez des droits suivants sur vos données :</p>
+      <ul>
+        <li><strong>Droit d'accès</strong> à vos données personnelles</li>
+        <li><strong>Droit de rectification</strong> des données inexactes ou incomplètes</li>
+        <li><strong>Droit à l'effacement</strong> (« droit à l'oubli »)</li>
+        <li><strong>Droit à la limitation</strong> du traitement</li>
+        <li><strong>Droit à la portabilité</strong> de vos données</li>
+        <li><strong>Droit d'opposition</strong> au traitement</li>
+      </ul>
+      <p>Pour exercer ces droits, vous pouvez contacter Jean Claude Delpech à l'adresse <a href="mailto:paridel2001@yahoo.fr">paridel2001@yahoo.fr</a> ou au <a href="tel:0672264729">06 72 26 47 29</a>.</p>
+      <p>Les données collectées sont conservées pendant la durée nécessaire au traitement de votre demande et au maximum 3 ans à compter du dernier contact. Aucune donnée n'est cédée à des tiers.</p>
+      <p>Vous disposez également du droit d'introduire une réclamation auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> (Commission Nationale de l'Informatique et des Libertés).</p>
+    </section>
+
+    <section>
+      <h2>Cookies</h2>
+      <p>Ce site n'utilise <strong>aucun cookie de traçage publicitaire</strong> ni outil d'analyse statistique tiers. Aucun cookie n'est déposé sur votre terminal sans votre consentement explicite.</p>
+      <p>Les seuls éléments techniques chargés depuis des serveurs tiers sont les polices Google Fonts (Playfair Display et Inter), utilisées exclusivement à des fins d'affichage et qui ne déposent pas de cookies de tracking.</p>
+    </section>
+
+    <section>
+      <h2>Liens hypertextes</h2>
+      <p>Le site Résinov peut contenir des liens hypertextes vers d'autres sites internet. L'éditeur n'exerce aucun contrôle sur le contenu de ces sites et ne saurait être tenu responsable de leur contenu, de leurs pratiques en matière de protection des données personnelles ou de tout dommage résultant de leur utilisation.</p>
+    </section>
+
+    <section>
+      <h2>Responsabilité</h2>
+      <p>Les informations diffusées sur le site Résinov sont présentées à titre indicatif et sont susceptibles d'évoluer. Jean Claude Delpech s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, sans pour autant garantir l'absence d'erreurs.</p>
+      <p>L'utilisation du site se fait sous la seule responsabilité de l'utilisateur.</p>
+    </section>
+
+    <section>
+      <h2>Droit applicable et juridiction compétente</h2>
+      <p>Les présentes mentions légales sont régies par le <strong>droit français</strong>. En cas de litige et après tentative de recherche d'une solution amiable, compétence exclusive est attribuée aux tribunaux français compétents.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Pour toute question relative aux présentes mentions légales ou à l'utilisation de ce site, vous pouvez contacter :</p>
+      <div class="info-card">
+        <p><strong>Jean Claude Delpech</strong> — Résinov</p>
+        <p>📞 <a href="tel:0672264729">06 72 26 47 29</a></p>
+        <p>✉️ <a href="mailto:paridel2001@yahoo.fr">paridel2001@yahoo.fr</a></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#formation">Formation</a>
+      <a href="index.html#programme">Programme</a>
+      <a href="index.html#formateur">Formateur</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Résinov — Formation professionnelle · Île-de-France · Tous droits réservés</div>
+  </div>
+</footer>
+
+</body>
+</html>
